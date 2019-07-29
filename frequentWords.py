@@ -13,9 +13,9 @@ def frequencyMap(text, k):
         freq[pattern] = patternCount(text, pattern)
     return freq
 
-def frequentWords(Text, k):
+def frequentWords(text, k):
     words = []
-    freq = frequencyMap(Text, k)
+    freq = frequencyMap(text, k)
     m = max(freq.values())
     for key in freq:
         if freq[key] == m: words.append(key)

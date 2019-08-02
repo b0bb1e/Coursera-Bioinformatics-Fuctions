@@ -1,9 +1,3 @@
-def motifs(profile, dna):
-    bestMotifs = []
-    for string in dna:
-        bestMotifs.append(profileMostProbableKmer(string, len(profile["A"]), profile))
-    return bestMotifs
-    
 def pr(text, profile):
     p = 1
     for i in range(len(text)):
@@ -19,3 +13,9 @@ def profileMostProbableKmer(text, k, profile):
             mostP = newP
             mostK = text[i:i + k]
     return mostK
+
+def motifs(profile, dna):
+    bestMotifs = []
+    for string in dna:
+        bestMotifs.append(profileMostProbableKmer(string, len(profile["A"]), profile))
+    return bestMotifs

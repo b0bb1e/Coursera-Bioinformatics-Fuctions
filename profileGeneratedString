@@ -27,7 +27,6 @@ def weightedDie(probs):
     return kmer
     
 def profileGeneratedString(text, profile, k):
-    # your code here
     probs = {}
     for i in range(0, len(text) - k + 1):
         probs[text[i:i + k]] = pr(text[i:i + k], profile)
